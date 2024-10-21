@@ -5,17 +5,39 @@ import Products from './components/products/products'
 
 
 function App() {
+  const [state, setState] = useState(0)
+ 
+  let storeageVar = 0
+ 
+  const handlevariableCount= ()=>{
+    storeageVar = storeageVar + 1
+    console.log(storeageVar)
+  }
+
+ 
   
-  const information = {
-    message: "secret",
-    phone: "01974547438"
-  };
+const handleState = ()=>{
+  setState(state + 1)
+  console.log(state)
+}
+
+console.log("hello boss")
+  
   
   return (
     <>
+     <div>
+      <h1>This is Stat count {state}</h1>
+      <h1>This is Vrriable count {storeageVar} </h1>
+     </div>
      
-      <h1>Hello React</h1>
-   <Products info={information}></Products>
+     <button onClick={handleState}>Change State Count</button>
+     <button onClick={ handlevariableCount}>Change Vrriable Count</button>
+     <br/>
+
+
+
+     
    
       
     </>
