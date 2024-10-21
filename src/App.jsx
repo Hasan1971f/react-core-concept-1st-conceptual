@@ -5,41 +5,55 @@ import Products from './components/products/products'
 
 
 function App() {
-  const [state, setState] = useState(0)
+  // const [state, setState] = useState(0)
+  // const [state1, setState1] = useState(0)
  
-  let storeageVar = 0
+// useEffect(() =>{
+//   console.log("hello from useEffect")
+//  }, [state])
  
-  const handlevariableCount= ()=>{
-    storeageVar = storeageVar + 1
-    console.log(storeageVar)
-  }
+
+  // let storeageVar = 0
+ 
+  // const handlevariableCount= ()=>{
+  //   storeageVar = storeageVar + 1
+  //   console.log(storeageVar)
+  // }
 
  
   
-const handleState = ()=>{
-  setState(state + 1)
-  console.log(state)
-}
+// const handleState = ()=>{
+//   setState(state + 1)
+//   console.log(state)
+// }
 
-console.log("hello boss")
-  
+const [status, setStatus] = useState(false)
+
+
+const handleStatus = () => {
+  setStatus(!false)
+}  
+console.log(status)
   
   return (
     <>
-     <div>
+     {/* <div>
       <h1>This is Stat count {state}</h1>
       <h1>This is Vrriable count {storeageVar} </h1>
-     </div>
-     
-     <button onClick={handleState}>Change State Count</button>
+     </div> */}
+
+     <button onClick={handleStatus}>Handle Status</button>
+   
+     {/* <button onClick={handleState}>Change State Count</button>
      <button onClick={ handlevariableCount}>Change Vrriable Count</button>
-     <br/>
+     <br/> */}
 
 
-
+   <h1>Hello App jsx</h1>
      
    
       
+    
     </>
   )
 }
